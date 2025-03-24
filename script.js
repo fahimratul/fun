@@ -27,6 +27,27 @@ function changeColor() {
   currentColorIndex = (currentColorIndex + 1) % colors.length;
 }
 
+const row = document.getElementById('row'); // Assuming you have an element with ID 'row'
 // Add event listener to the button
 const colorChangeButton = document.getElementById('button');
 colorChangeButton.addEventListener('click', changeColor);
+let rotate = 0;
+
+
+
+const rotateButton = document.getElementById('rotate');
+
+rotateButton.addEventListener('click', () => {
+  if(rotate===90){
+  rotate = 0;
+  gridContainer.style.gridTemplateColumns = 'repeat(8, 1fr)';
+  gridContainer.style.gridTemplateRows = ''; // Reset gridTemplateRows
+  
+  }
+  else{
+    rotate=90;
+    gridContainer.style.gridTemplateColumns = 'repeat(4, 1fr)';
+    gridContainer.style.gridTemplateRows = 'repeat(8, 1fr)';
+   }
+  
+});
