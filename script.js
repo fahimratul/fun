@@ -6,8 +6,18 @@ let currentColorIndex = 0;
 for (let i = 0; i < 32; i++) {
   const box = document.createElement('div');
   box.classList.add('box');
+  box.style.width =box.style.height;
   box.addEventListener('click', () => {
     box.style.backgroundColor = colors[currentColorIndex];
+    box.animate([
+      { transform: 'scale(1)', opacity: '1' },
+      { transform: 'scale(0.5)', opacity: '0.5' },
+      { transform: 'scale(1)', opacity: '1' }
+    ], {
+      duration: 500,
+      iterations: 1
+    });
+    box.style.opacity = '1';
   });
   gridContainer.appendChild(box);
 }
