@@ -11,11 +11,15 @@ body {
   }
   
   @keyframes changeBackground {
-    0% { background-color: #202c39; }
-    20% { background-color: #283845; }
-    40% { background-color: #b8b08d; }
-    60% { background-color: #f2d492; }
-    80% { background-color: #f29559; }
+    0% { background-color: #f29559; }
+    11% { background-color: #f2d492; }
+    22% { background-color: #b8b08d; }
+    33% { background-color: #283845; }
+    44% { background-color: #202c39; }
+    55% { background-color: #283845; }
+    66% { background-color: #b8b08d; }
+    77% { background-color: #f2d492; }
+    88% { background-color: #f29559; }
     100% { background-color: #cc444b; }
   }
   .grid-container {
